@@ -13,7 +13,7 @@
 ## Как запустить
 
 1. Убедитесь, что установлен Python 3.8+.
-2. Сохраните файлы `factorial_solver.py`, `test_factorial.py`, `.gitignore` и `README.md` в одну папку.
+2. Сохраните файлы `factorial.py`, `.gitignore` и `README.md` в одну папку.
 3. Запустите программу:
    ```bash
    python factorial_solver.py
