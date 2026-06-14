@@ -1,15 +1,33 @@
-import math as m
+import math
 
-def is_factorial():
-    try:
-        num = int(input("Enter a number: "))
 
-        if num < 0:
-            return "Число не может быть отрицательным"
+def calculate_factorial(n: int) -> int:
+    return math.factorial(n)
 
-        return m.factorial(num)
 
-    except ValueError:
-        return "Нужно вводить целое число"
+def get_positive_integer() -> int:
+    while True:
+        user_input = input("Введите положительное целое число: ")
 
-print(is_factorial())
+        try:
+            number = int(user_input)
+
+            if number <= 0:
+                print("Ошибка: число должно быть строго положительным (больше 0). Попробуйте снова.")
+                continue
+
+            return number
+
+        except ValueError:
+            print("Ошибка: вы ввели нечисловые данные. Пожалуйста, введите целое число.")
+
+
+def main():
+    print("--- Калькулятор факториала ---")
+    number = get_positive_integer()
+    result = calculate_factorial(number)
+    print(f"Факториал числа {number} равен: {result}")
+
+
+if __name__ == "__main__":
+    main()
